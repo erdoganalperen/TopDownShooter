@@ -9,6 +9,5 @@ public class PlayerRotationController : MonoBehaviour
     [SerializeField] private Transform _tower;
     void Update()
     {
-        // _tower.Rotate(0, _inputData.Horizontal, Space.Self);
     }
 }
