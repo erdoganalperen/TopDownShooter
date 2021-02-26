@@ -10,7 +10,9 @@ namespace TopDownShooter.Camera
         [SerializeField]
         private CameraSettings _cameraSettings;
         [SerializeField]
-        private Transform _targetTransform;
+        private Transform _rotationTarget;
+        [SerializeField]
+        private Transform _positionTarget;
         [SerializeField]
         private Transform _cameraTransform;
         public ShootingManager _shootingManager;
@@ -26,11 +28,13 @@ namespace TopDownShooter.Camera
         }
         private void CameraRotationFollow()
         {
-            _cameraTransform.rotation = Quaternion.Lerp(_cameraTransform.rotation, Quaternion.LookRotation(_targetTransform.position - _cameraTransform.position), Time.deltaTime * _cameraSettings.RotationLerpSpeed);
+            _cameraTransform.rotation = Quaternion.Lerp(_cameraTransform.rotation, Quaternion.LookRotation(_rotationTarget.forward), Time.deltaTime * _cameraSettings.RotationLerpSpeed);
         }
         private void CameraMovementFollow()
         {
-            _cameraTransform.position = Vector3.Lerp(_cameraTransform.position, _targetTransform.position + _cameraSettings.PositionOffset, Time.deltaTime * _cameraSettings.PositionLerp);
+            _cameraTransform.localPosition = _cameraSettings.PositionOffset;
+            // Vector3 offset = (_cameraTransform.right * _cameraSettings.PositionOffset.x) + (_cameraTransform.up * _cameraSettings.PositionOffset.y) + (_cameraTransform.forward * _cameraSettings.PositionOffset.z);
+            // _cameraTransform.position = Vector3.Lerp(_cameraTransform.position, _positionTarget.position + offset, Time.deltaTime * _cameraSettings.PositionLerp);
         }
     }
 

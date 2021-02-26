@@ -9,16 +9,17 @@ namespace TopDownShooter.PlayerControls
     {
         [SerializeField] private Rigidbody _rigidbody;
         [SerializeField] private InputData _inputData;
-        [SerializeField] private PlayerMovementSettings _movementSettings;
+        [SerializeField] private Transform _targetTransform;
+        [SerializeField] private PlayerMovementSettings _playerMovementSettings;
 
         private void Update()
         {
 
-            _rigidbody.MovePosition(_rigidbody.position + _rigidbody.transform.forward * _inputData.Vertical * _movementSettings.VerticalSpeed);
-            _rigidbody.MovePosition(_rigidbody.position + _rigidbody.transform.right * _inputData.Horizontal * _movementSettings.HorizontalSpeed);
+            _rigidbody.MovePosition(_rigidbody.position + _rigidbody.transform.forward * _inputData.Vertical * _playerMovementSettings.VerticalSpeed);
+            _targetTransform.Rotate(0, _inputData.Horizontal * _playerMovementSettings.HorizontalSpeed, 0, Space.Self);
             if (_inputData.IsJump)
             {
-                _rigidbody.AddForce(Vector3.up * _movementSettings.JumpForce, ForceMode.Impulse);
+                _rigidbody.AddForce(Vector3.up * _playerMovementSettings.JumpForce, ForceMode.Impulse);
             }
         }
     }
