@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TopDownShooter.Shooting;
 using UnityEngine;
 
 namespace TopDownShooter.Camera
@@ -15,16 +14,12 @@ namespace TopDownShooter.Camera
         private Transform _positionTarget;
         [SerializeField]
         private Transform _cameraTransform;
-        public ShootingManager _shootingManager;
 
         private void Update()
         {
             CameraRotationFollow();
             CameraMovementFollow();
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                _shootingManager.Shoot(_cameraTransform.position, _cameraTransform.forward);
-            }
+
         }
         private void CameraRotationFollow()
         {
