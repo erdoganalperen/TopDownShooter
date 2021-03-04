@@ -52,6 +52,7 @@ namespace TopDownShooter.PlayerInput
             bool negativeActive = Input.GetKey(negative);
             if (positiveActive)
             {
+                Debug.Log("test");
                 value += _increaseAmount;
             }
             else if (negativeActive)

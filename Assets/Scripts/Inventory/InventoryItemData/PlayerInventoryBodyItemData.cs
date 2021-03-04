@@ -8,9 +8,9 @@ namespace TopDownShooter.Inventory
     [CreateAssetMenu(menuName = "TopDown Shooter/Inventory/Player Inventory Body Item Data")]
     public class PlayerInventoryBodyItemData : AbstractPlayerInventoryItemData<PlayerInventoryBodyItemMono>
     {
-        public override void CreateIntoInventory(PlayerInventoryController targetPlayerIventory)
+        public override void Initialize(PlayerInventoryController targetPlayerIventory)
         {
-            var instantiated = InstantiateAndInitializePrefab(targetPlayerIventory.Parent);
+            var instantiated = InstantiateAndInitializePrefab(targetPlayerIventory.BodyParent);
             Debug.Log("bodyitemdata");
         }
     }
