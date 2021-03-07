@@ -26,7 +26,7 @@ namespace TopDownShooter.PlayerInput
         [SerializeField] private float _increaseAmount = .05f;
 
 
-        public void ProcessInput()
+        public virtual void ProcessInput()
         {
             if (_axisActive)
             {

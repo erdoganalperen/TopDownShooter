@@ -12,6 +12,10 @@ namespace TopDownShooter.PlayerControls
         [SerializeField] private Transform _targetTransform;
         [SerializeField] private PlayerMovementSettings _playerMovementSettings;
 
+        public void InitializeInput(InputData inputData)
+        {
+            _inputData = inputData;
+        }
         private void Update()
         {
 

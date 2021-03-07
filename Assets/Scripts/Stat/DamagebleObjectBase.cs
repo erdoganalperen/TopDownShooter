@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UniRx;
 
 namespace TopDownShooter.Stat
 {
@@ -11,6 +11,7 @@ namespace TopDownShooter.Stat
         public int InstanceId { get; private set; }
         public float Health = 100;
         private Vector3 _defaultScale;
+        public ReactiveCommand OnDeath = new ReactiveCommand();
         protected virtual void Awake()
         {
             InstanceId = _collider.GetInstanceID();
@@ -28,12 +29,13 @@ namespace TopDownShooter.Stat
             Debug.Log("dmg: " + dmg);
             if (Health <= 0)
             {
+                OnDeath.Execute();
                 Destroy(gameObject);
             }
         }
         private void Update()
         {
-            transform.localScale = Vector3.Lerp(transform.localScale, _defaultScale * (Health / 100f), Time.deltaTime);
+
         }
     }
 }
