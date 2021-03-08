@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace TopDownShooter.AI
 {
-    public class InputDataAI : InputData
+    public class InputDataAI : AbstractInputData
     {
         protected Vector3 _currentTarget;
         protected Transform _targetTransform;
@@ -16,7 +16,6 @@ namespace TopDownShooter.AI
         }
         public override void ProcessInput()
         {
-            base.ProcessInput();
         }
     }
 }

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae63c1c5f219bdd47844b08be247b802, type: 3}
-  m_Name: New Input Movement Data AI
+  m_Name: New Input Movement Data AI tower
   m_EditorClassIdentifier: 
-  Horizontal: 0
-  Vertical: 0
+  Horizontal: 1.03
+  Vertical: 1.44
   IsJump: 0
   _axisActive: 0
   AxisNameHorizontal: 

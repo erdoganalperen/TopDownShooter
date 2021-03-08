@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5c91677beac44429da0cb7e4de3384, type: 3}
   m_Name: TowerRotationSettings_LocalPlayer 1
   m_EditorClassIdentifier: 
-  TowerRotationSpeed: 0.01
+  TowerRotationSpeed: 1

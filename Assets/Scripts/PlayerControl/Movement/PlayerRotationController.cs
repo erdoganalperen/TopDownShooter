@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerRotationController : MonoBehaviour
 {
-    [SerializeField] private InputData _inputData;
+    [SerializeField] private PlayerInputData _inputData;
     [SerializeField] private Transform _tower;
     void Update()
     {

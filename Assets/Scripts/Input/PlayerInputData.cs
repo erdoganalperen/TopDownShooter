@@ -4,13 +4,9 @@ using UnityEngine;
 
 namespace TopDownShooter.PlayerInput
 {
-    [CreateAssetMenu(menuName = "TopDown Shooter/Input/Input Data")]
-    public class InputData : ScriptableObject
+    [CreateAssetMenu(menuName = "TopDown Shooter/Input/Player Input Data")]
+    public class PlayerInputData : AbstractInputData
     {
-        public float Horizontal;
-        public float Vertical;
-        public bool IsJump;
-
         [Header("Axis Base Control")]
         [SerializeField] private bool _axisActive;
         [SerializeField] private string AxisNameHorizontal;
@@ -26,7 +22,7 @@ namespace TopDownShooter.PlayerInput
         [SerializeField] private float _increaseAmount = .05f;
 
 
-        public virtual void ProcessInput()
+        public override void ProcessInput()
         {
             if (_axisActive)
             {

@@ -18,17 +18,16 @@ namespace TopDownShooter.Inventory
             base.Destroy();
             Debug.Log("scriptableshoot manager destroyed");
         }
-        public void Shoot(Vector3 origin, Vector3 direction)
+        public void Shoot(Vector3 origin, Vector3 direction, IDamage damage)
         {
             RaycastHit hit;
             var physic = Physics.Raycast(origin, direction, out hit);
             if (physic)
             {
-                Debug.Log("Collider: " + hit.collider.name);
                 int colliderInstanceId = hit.collider.GetInstanceID();
                 if (DamagebleHelper.DamagebleList.ContainsKey(colliderInstanceId))
                 {
-                    DamagebleHelper.DamagebleList[colliderInstanceId].Damage(10);
+                    DamagebleHelper.DamagebleList[colliderInstanceId].Damage(damage);
                 }
             }
         }

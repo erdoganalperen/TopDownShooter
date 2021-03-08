@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PlayerMovementSettings_LocalPlayer 1
   m_EditorClassIdentifier: 
   HorizontalSpeed: 1
-  VerticalSpeed: 0.01
+  VerticalSpeed: 0.03
   JumpForce: 5
