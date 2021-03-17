@@ -901,6 +901,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: _TCKCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2340371656634070729, guid: 10cc2d013ef2a4a478bb8664eb850775,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2340371656634070733, guid: 10cc2d013ef2a4a478bb8664eb850775,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1492,81 +1497,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2debcb3c417b07419457484a835eb7d, type: 3}
---- !u!1 &1723621166
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1723621168}
-  - component: {fileID: 1723621167}
-  - component: {fileID: 1723621169}
-  m_Layer: 0
-  m_Name: InGameNetworkController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1723621167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723621166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d0881ddfa9a8cb44943f1d57def2848, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _localPlayerPrefab: {fileID: 8876511002954365594, guid: 4befaa2c7b02ea847b1ea6f3f643ed42,
-    type: 3}
-  _remotePlayerPrefab: {fileID: 5498967678641570339, guid: daf2ce2e5edf350459d13f4956262115,
-    type: 3}
---- !u!4 &1723621168
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723621166}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.3, y: 4.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1723621169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723621166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ownerId: 0
-  group: 0
-  OwnerShipWasTransfered: 0
-  prefixBackup: -1
-  synchronization: 0
-  onSerializeTransformOption: 3
-  onSerializeRigidBodyOption: 2
-  ownershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 0}
-  ObservedComponentsFoldoutOpen: 1
-  viewIdField: 100
-  instantiationId: 100
-  currentMasterID: -1
-  isRuntimeInstantiated: 0
 --- !u!4 &1775002832 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: d2debcb3c417b07419457484a835eb7d,
@@ -1604,7 +1534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _abstractScriptableManagerArray:
   - {fileID: 11400000, guid: 7d387e7a885cf3742907d5be479080c2, type: 2}
-  _dontDestroyOnLoad: 1
+  - {fileID: 11400000, guid: 58e9ba60577f6dc43af8f01fc274fae1, type: 2}
 --- !u!4 &1878551545
 Transform:
   m_ObjectHideFlags: 0

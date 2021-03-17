@@ -11,7 +11,6 @@ namespace TopDownShooter.Inventory
         public override void Initialize(PlayerInventoryController targetPlayerIventory)
         {
             var instantiated = InstantiateAndInitializePrefab(targetPlayerIventory.BodyParent);
-            Debug.Log("bodyitemdata");
         }
     }
 }

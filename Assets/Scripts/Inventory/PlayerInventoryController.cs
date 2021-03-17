@@ -7,13 +7,15 @@ namespace TopDownShooter.Inventory
 {
     public class PlayerInventoryController : MonoBehaviour
     {
-        [SerializeField]
-        private AbstractBasePlayerInventoryItemData[] _inventoryItemDataArray;
+        [SerializeField] private AbstractBasePlayerInventoryItemData[] _inventoryItemDataArray;
         private List<AbstractBasePlayerInventoryItemData> _createdItemDataList;
         public Transform BodyParent;
         public Transform CanonParent;
 
         public ReactiveCommand ReactiveShootCommand { get; private set; }
+
+        public int Id { get; set; }
+
         private void Start()
         {
             InitializeInventory(_inventoryItemDataArray);
